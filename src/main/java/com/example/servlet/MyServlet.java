@@ -29,6 +29,7 @@ public class MyServlet extends HttpServlet{
     protected void getDriver() {
         try {
             Class.forName("oracle.jdbc.OracleDriver");
+            log.debug("ORACLE DB LOADED");
         } catch (ClassNotFoundException e) {
             log.error("ClassNotFoundException!", e);
             e.printStackTrace();
